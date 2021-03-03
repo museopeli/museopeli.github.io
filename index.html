@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Set scaling for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-title" content="Museopeli">
+    <meta name="apple-mobile-web-app-title" content="Museopeli">
+
+    <!-- Include main stylesheet for mobile devices -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="apple-touch-icon" href="app-logo.png">
+
+    <!-- Set character set for utf-8 standard -->
+    <meta charset="utf-8">
+
+    <!-- Include main javascript file -->
+    <script type="text/javascript" src="data.js"></script>
+    <script src="index.js" type="text/javascript"></script>
+
+    <!-- Page title -->
+    <title></title>
+  </head>
+  <body>
+    <div class="fullscreen" id="mainpage">
+      <div class="startbutton" id="startbutton" onclick="startGame()">
+        Aloita
+      </div>
+      <div class="infobutton" id="infobutton" onclick="">
+        <img src="suurennuslasi.png" alt="asd" onclick="document.getElementById('manual').style.display = 'block'">
+        <div class="manual" id="manual" onclick="document.getElementById('manual').style.display = 'none'">
+          <h3>Tervetuloa pelaamaan museopeliä!</h3>
+          <p>Klikkaa "Aloita" ja seuraa yläreunassa näkyviä kysymyksiä.
+            Yritä etsiä kysymysten avulla vanhoja sairaanhoitajakoulutuksessa
+            käytettyjä esineitä. Oikeaa esinettä klikkaamalla saat tietoa
+            kyseisestä esineestä.</p>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="fullscreen" id="rewardpage">
+      <div class="inforoll">
+        Hienoa!
+      </div>
+    </div>
+    <div class="fullscreen" id="infopage">
+      <div class="inforoll">
+        <h1 id="objectTitle">Esineen nimi</h1>
+        <img src="" id="infoimage">
+
+        <p id="objectText">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit
+          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.</p>
+
+          <div class="bottombutton" id="nextquestion" onclick="nextQuestion()">
+            JATKA
+          </div>
+          <div class="bottombutton" style="display:none;" id="end" onclick="window.location.reload();">
+            Alkuun
+          </div>
+
+      </div>
+
+    </div>
+
+    <div class="top">
+      <div class="topleft">
+        <div class="logo">
+
+        </div>
+        <div class="return">
+
+        </div>
+      </div>
+      <div id="question" onclick="nextQuestion()">
+        LADATAAN...
+      </div>
+      <div class="score" id="score">
+        0p
+      </div>
+    </div>
+    <div class="canvas">
+      <img src="museokanvas.jpg" alt="Peli ei toimi" class="gameboard">
+
+      <!--<div class="choise ensimmainen" onclick="answer(1)" id="1"></div>-->
+      <!--<div class="choise toinen" onclick="answer(2)" id="2"></div>-->
+      <!--<div class="choise kolmas" onclick="answer(3)" id="3"></div> -->
+      <!--<div class="choise neljas" onclick="answer(4)" id="4"></div> -->
+      <!--<div class="choise lasiruisku" onclick="answer(5)" id="5"></div>-->
+      <!--<div class="choise kuudes" onclick="answer(6)" id="6"></div> -->
+      <!--<div class="choise seitsemas" onclick="answer(7)" id="7"></div> -->
+      <div class="choise ruisku" onclick="answer(8)" id="8"></div>
+      <!--<div class="choise yhdeksas" onclick="answer(9)" id="9"></div> -->
+      <!--<div class="choise kymmenes" onclick="answer(10)" id="10"></div> -->
+      <!--<div class="choise yksitoista" onclick="answer(11)" id="11"></div> -->
+      <!--<div class="choise kaksitoista" onclick="answer(12)" id="12"></div> -->
+      <!--<div class="choise luentorulla" onclick="answer(13)" id="13"></div>-->
+      <div class="choise mannerheimsali" onclick="answer(14)" id="14"></div>
+      <div class="choise etm" onclick="answer(15)" id="15"></div>
+      <div class="choise nesteensiirtolaite" onclick="answer(16)" id="16"></div>
+      <div class="choise posliinimalja" onclick="answer(17)" id="17"></div>
+      <!--<div class="choise kahdeksantoista" onclick="answer(18)" id="18"></div> -->
+    <!--  <div class="choise yhdeksantoista" onclick="answer(19)" id="19"></div> -->
+      <!--<div class="choise kaksikymmenta" onclick="answer(20)" id="20"></div> -->
+      <div class="choise pulloEetteria" onclick="answer(21)" id="21"></div>
+      <div class="choise nukutuskaavio" onclick="answer(22)" id="22"></div>
+      <div class="choise liinat" onclick="answer(23)" id="23"></div>
+      <div class="choise instrumenttikeitin" onclick="answer(24)" id="24"></div>
+      <!--<div class="choise kaksviis" onclick="answer(25)" id="25"></div> -->
+      <div class="choise puukaukaloNuija" onclick="answer(26)" id="26"></div>
+      <!--<div class="choise sinkkisanko" onclick="answer(27)" id="27"></div>-->
+      <div class="choise virtsakatetreja" onclick="answer(28)" id="28"></div>
+
+    </div>
+    <div class="hidden">
+    	<script type="text/javascript">
+    		<!--//--><![CDATA[//><!--
+    			var images = new Array()
+    			function preload() {
+    				for (i = 0; i < preload.arguments.length; i++) {
+    					images[i] = new Image()
+    					images[i].src = preload.arguments[i]
+    				}
+            console.log('images preloaded');
+    			}
+    			preload(
+    				"info.jpg",
+    				"museokanvas.jpg",
+    				"StartScreen.jpg",
+            "suurennuslasi.png",
+            "images/0.jpg",
+            "images/1.jpg",
+            "images/2.jpg",
+            "images/3.jpg",
+            "images/4.jpg",
+            "images/5.jpg",
+            "images/6.jpg",
+            "images/7.jpg",
+            "images/8.jpg",
+            "images/9.jpg",
+            "images/10.jpg"
+    			)
+    		//--><!]]>
+    	</script>
+    </div>
+  </body>
+</html>

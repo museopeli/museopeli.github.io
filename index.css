@@ -1,0 +1,309 @@
+/*
+  Tyylitiedosto
+*/
+
+html {
+  background-color: black;
+}
+body {
+  margin: 0px;
+  background-color: black;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#mainpage {
+  background: url("StartScreen.jpg") no-repeat top center;
+  background-size: 100vw;
+  background-color: rgb(106,107,111);
+}
+
+
+#infopage, #rewardpage {
+  display: none;
+
+  overflow-y: scroll;
+}
+
+
+.startbutton {
+  position: absolute;
+  bottom: 25vh;
+  /*background-color: lightblue;*/
+  width: 100vw;
+  font-size: 20vw;
+  text-align: center;
+  color: rgb(235, 89, 3);
+  font-family: Garamond, serif;
+
+}
+.infobutton{
+  /*background-color: lightyellow;*/
+  position: absolute;
+  bottom: 0;
+  font-size: 20vw;
+  width: 20vw;
+  left: 5vw;
+}
+
+.manual {
+  background-color: rgb(106,107,111);
+  display: none;
+  position: fixed;
+  top: 50vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 5vw;
+  font-family: Garamond, serif;
+  padding: 0vw 5vw 0vw 5vw;
+}
+
+.inforoll {
+  background-image: url("info.jpg");
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px black;
+  position: relative;
+}
+.inforoll p {
+  text-align: left;
+  font-size: 1.1em;
+  padding-bottom: 10px;
+}
+.inforoll img {
+  width: 70%;
+  box-shadow: 0px 0px 10px white;
+  border-radius: 5px;
+}
+.inforoll h1 {
+  font-size: 1.8em;
+}
+#rewardpage .inforoll {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 80%;
+  line-height: 3em;
+  font-size: 2em;
+}
+.topmain {
+  text-align: center;
+  font-size: 25px
+}
+.bottombutton {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 50%;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: lightgrey;
+}
+.top {
+  position: fixed;
+  height: 10vh;
+  width: 100vw;
+  /*background-color: lightgrey;*/
+  z-index: 2;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.topleft {
+  float: left;
+  height: 100%;
+  width: 15%;
+}
+.logo, .return {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#question {
+  float: left;
+  height: 100%;
+  width: 70%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.15em;
+  color: white;
+}
+.score {
+  float: left;
+  height: 100%;
+  width: 15%;
+  color: white;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.canvas {
+
+  position: absolute;
+  top: 10vh;
+}
+.gameboard {
+  width: 300vw;
+}
+
+.choise {
+  position: absolute;
+  width: 40vw;
+  height: 40vw;
+  z-index: 1;
+  border-radius: 25px;
+}
+
+.ruisku {
+  top: 240vw;
+  left: 15vw;
+  /*background-color: blue;
+  opacity: 0.5;*/
+  width: 35vw;
+  height: 25vw;
+}
+
+/*.ensimmainen {
+  top:  120vw;
+  left: 20vw;
+  background-color: red;
+  opacity: 0.5;
+  width: 88vw;
+  height: 68vw;
+  }
+ .toinen {
+  top:  160vw;
+  left: 117vw;
+  background-color: green;
+  opacity: 0.5;
+  width: 35vw;
+  height: 25vw;
+}*/
+  .mannerheimsali {
+    top: 210vw;
+    left: 225vw;
+    /*background-color: blue;*/
+    opacity: 0.5;
+    width: 55vw;
+    height: 36vw;
+  }
+    /*.lasiruisku {
+     top:  205vw;
+     left: 10vw;
+     background-color: green;
+     opacity: 0.5;
+     width: 38vw;
+     height: 23vw;
+   }*/
+   /*.luentorulla {
+    top:  250vw;
+    left: 208vw;
+    background-color: red;
+    opacity: 0.5;
+    width: 55vw;
+    height: 10vw;
+  }*/
+  .etm {
+   top:  266vw;
+   left: 25vw;
+   /*background-color: yellow;*/
+   opacity: 0.5;
+   width: 55vw;
+   height: 28vw;
+ }
+ .nesteensiirtolaite {
+  top:  265vw;
+  left: 95vw;
+  /*background-color: orange;*/
+  opacity: 0.5;
+  width: 44vw;
+  height: 28vw;
+}
+.posliinimalja {
+ top:  269vw;
+ left: 149vw;
+ /*background-color: orange;*/
+ opacity: 0.5;
+ width: 43vw;
+ height: 24vw;
+}
+.pulloEetteria {
+ top:  300vw;
+ left: 15vw;
+ /*background-color: brown;*/
+ opacity: 0.5;
+ width: 25vw;
+ height: 27vw;
+}
+.nukutuskaavio {
+ top:  303vw;
+ left: 48vw;
+ /*background-color: lightblue;*/
+ opacity: 0.5;
+ width: 23vw;
+ height: 23vw;
+}
+.liinat {
+ top:  309vw;
+ left: 75vw;
+ /*background-color: green;*/
+ opacity: 0.5;
+ width: 75vw;
+ height: 20vw;
+}
+.instrumenttikeitin {
+ top:  335vw;
+ left: 25vw;
+ /*background-color: brown;*/
+ opacity: 0.5;
+ width: 48vw;
+ height: 50vw;
+}
+.virtsakatetreja {
+ top:  373vw;
+ left: 105vw;
+ /*background-color: yellow;*/
+ opacity: 0.5;
+ width: 42vw;
+ height: 13vw;
+}
+.puukaukaloNuija {
+ top:  305vw;
+ left: 155vw;
+ /*background-color: blue;*/
+ opacity: 0.5;
+ width: 138vw;
+ height: 60vw;
+}
+/*.sinkkisanko {
+ top:  298vw;
+ left: 255vw;
+ background-color: green;
+ opacity: 0.5;
+ width: 39vw;
+ height: 57vw;
+}*/
